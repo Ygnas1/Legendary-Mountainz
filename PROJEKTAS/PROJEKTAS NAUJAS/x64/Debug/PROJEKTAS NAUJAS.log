@@ -1,0 +1,4 @@
+﻿  PROJEKTAS NAUJAS.cpp
+A:\Ignas\IT\PROJEKTAS\PROJEKTAS NAUJAS\PROJEKTAS NAUJAS\PROJEKTAS NAUJAS.cpp(41,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+A:\Ignas\IT\PROJEKTAS\PROJEKTAS NAUJAS\PROJEKTAS NAUJAS\PROJEKTAS NAUJAS.cpp(971,28): warning C4101: 'predefense': unreferenced local variable
+  PROJEKTAS NAUJAS.vcxproj -> A:\Ignas\IT\PROJEKTAS\PROJEKTAS NAUJAS\x64\Debug\PROJEKTAS NAUJAS.exe

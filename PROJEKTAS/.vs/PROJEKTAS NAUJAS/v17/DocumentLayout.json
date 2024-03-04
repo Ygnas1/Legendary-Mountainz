@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "A:\\Ignas\\IT\\PROJEKTAS\\PROJEKTAS NAUJAS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A84B1D-3293-4506-93EF-36723CC289E2}|PROJEKTAS NAUJAS\\PROJEKTAS NAUJAS.vcxproj|A:\\Ignas\\IT\\PROJEKTAS\\PROJEKTAS NAUJAS\\PROJEKTAS NAUJAS\\PROJEKTAS NAUJAS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E5A84B1D-3293-4506-93EF-36723CC289E2}|PROJEKTAS NAUJAS\\PROJEKTAS NAUJAS.vcxproj|solutionrelative:PROJEKTAS NAUJAS\\PROJEKTAS NAUJAS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PROJEKTAS NAUJAS.cpp",
+              "DocumentMoniker": "A:\\Ignas\\IT\\PROJEKTAS\\PROJEKTAS NAUJAS\\PROJEKTAS NAUJAS\\PROJEKTAS NAUJAS.cpp",
+              "RelativeDocumentMoniker": "PROJEKTAS NAUJAS\\PROJEKTAS NAUJAS.cpp",
+              "ToolTip": "A:\\Ignas\\IT\\PROJEKTAS\\PROJEKTAS NAUJAS\\PROJEKTAS NAUJAS\\PROJEKTAS NAUJAS.cpp",
+              "RelativeToolTip": "PROJEKTAS NAUJAS\\PROJEKTAS NAUJAS.cpp",
+              "ViewState": "AQIAAKwEAAAAAAAAAAAAAMQEAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-21T11:54:31.52Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
