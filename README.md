@@ -1,6 +1,6 @@
 # Legendary Mountain
- Štai yra Igno ir Justo sukurtas EPIC žaidimas:
+ Čia gali parsisiųsti Igno ir Justo sukurtą EPIC žaidimą!
 
- 1.
- 2.
- 3.
+Parsisiuntus visus failiukus, atsidarai (KAZKOKS).cpp ir paleidi. Jeigu nespauzdina paveiksliukų, įsitikini ar tikrai visi .txt ir .wav failiukai įdėti į teisingą direktoriją.
+
+ 
