@@ -1168,6 +1168,8 @@ void Ending2() {
 
 int main() {
 
+    start();
+    coinFlip();
     TicTacToe();
     Wizard();
     Music();
