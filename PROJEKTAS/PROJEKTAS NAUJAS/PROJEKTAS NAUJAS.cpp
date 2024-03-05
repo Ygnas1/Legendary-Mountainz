@@ -14,7 +14,7 @@
 #include <time.h>
 #pragma comment(lib, "Winmm.lib")
 using namespace std;
-int health = 3, defense = 3, strength = 3;
+int health = 3, strength = 3;
 char square[10] = { 'o','1','2','3','4','5','6','7','8','9' };
 string name;
 bool isTrue = true;
@@ -132,9 +132,6 @@ void start() {
         if (i == 26) {
             cout << "\t \t \t \t  Health: " << health;
         }
-        if (i == 27) {
-            cout << "\t \t \t \t  Defence: " << defense;
-        }
         if (i == 28) {
             cout << "\t \t \t \t \t  Strength: " << strength;
         }
@@ -186,9 +183,6 @@ void coinFlip() {
         }
         if (i == 2) {
             cout << "\t \t \t Current health: " << health;
-        }
-        if (i == 3) {
-            cout << "\t \t \t Current defense: " << defense;
         }
         if (i == 4) {
             cout << "\t \t \t Current strength: " << strength;
@@ -449,9 +443,6 @@ void rockPaperScissors() {
                 if (i == 2) {
                     cout << "\t \t \t Current health: " << health;
                 }
-                if (i == 3) {
-                    cout << "\t \t \t Current defense: " << defense;
-                }
                 if (i == 4) {
                     cout << "\t \t \t Current strength: " << strength;
                 }
@@ -486,9 +477,6 @@ void rockPaperScissors() {
                 }
                 if (i == 2) {
                     cout << "\t \t \t Current health: " << health;
-                }
-                if (i == 3) {
-                    cout << "\t \t \t Current defense: " << defense;
                 }
                 if (i == 4) {
                     cout << "\t \t \t Current strength: " << strength;
@@ -1190,4 +1178,4 @@ int main() {
     else{
         Ending2();
     }
-}
+
