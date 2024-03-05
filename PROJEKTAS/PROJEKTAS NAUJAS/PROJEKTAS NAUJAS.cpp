@@ -1,3 +1,4 @@
+
 #include <windows.h>
 #include <iostream>
 #include <mmsystem.h>
@@ -19,19 +20,9 @@ string name;
 bool isTrue = true;
 int lhealth = 1000, attackgl;
 bool lesiusDead;
-int checkwin();
-void board();
-void statsPLUS(){
-    health++; 
-    defense++; 
-    strength++;
-}
 
 void calcHealth() {
     health++;
-}
-void calcDefense() {
-    defense++;
 }
 void calcStrenght() {
     strength++;
@@ -43,9 +34,9 @@ void seedRand() {
 }
 
 void start() {
-    
+
     PlaySound(TEXT("muzika.wav"), NULL, SND_FILENAME | SND_SYNC | SND_ASYNC);
-    
+
     string names = "Enter your name:";
     int b = 0;
     while (names[b] != '\0')
@@ -132,7 +123,7 @@ void start() {
     ifstream Warrior("Warrior.txt");
     string line;
     for (int i = 0; i < 57; i++) {
-        
+
         getline(Warrior, line);
         cout << line;
         if (i == 25) {
@@ -223,7 +214,8 @@ void coinFlip() {
     }
     if (flip == guess) {
         ifstream Trump_dead("Trump dead.txt");
-        statsPLUS();
+        calcHealth();
+        calcStrenght();
         std::system("cls");
         for (int i = 0; i < 68; i++) {
             getline(Trump_dead, line);
@@ -233,9 +225,6 @@ void coinFlip() {
             }
             if (i == 2) {
                 cout << "\t \t \t Current health: " << health;
-            }
-            if (i == 3) {
-                cout << "\t \t \t Current defense: " << defense;
             }
             if (i == 4) {
                 cout << "\t \t \t Current strength: " << strength;
@@ -251,7 +240,7 @@ void coinFlip() {
             }
             if (i == 20) {
                 cout << "\t \t \t How could this be??? How could you win against Trump?!?!? ";
-                
+
             }
             cout << endl;
         }
@@ -267,9 +256,6 @@ void coinFlip() {
             }
             if (i == 2) {
                 cout << "\t \t \t Current health: " << health;
-            }
-            if (i == 3) {
-                cout << "\t \t \t Current defense: " << defense;
             }
             if (i == 4) {
                 cout << "\t \t \t Current strength: " << strength;
@@ -301,7 +287,7 @@ void coinFlip() {
         t3++;
     }
     cout << endl;
-         } 
+         }
          std::system("pause");
          PlaySound(nullptr, nullptr, 0);
          std::system("cls");
@@ -315,7 +301,6 @@ void coinFlip() {
              w++;
          }
          cout << endl <<" Health: " << health<< endl;
-         cout << " Defense: " << defense << endl;
          cout << " Strength: " << strength << endl;
          std::system("pause");
          PlaySound(nullptr, nullptr, 0);
@@ -364,9 +349,6 @@ void rockPaperScissors() {
             }
             if (i == 2) {
                 cout << "\t \t \t Current health: " << health;
-            }
-            if (i == 3) {
-                cout << "\t \t \t Current defense: " << defense;
             }
             if (i == 4) {
                 cout << "\t \t \t Current strength: " << strength;
@@ -420,8 +402,10 @@ void rockPaperScissors() {
         if (wincheck == 1) {
             std::system("cls");
             ifstream Ye_dead("Ye dead.txt");
-            statsPLUS();
-            statsPLUS();
+            calcHealth();
+            calcHealth();
+            calcStrenght();
+            calcStrenght();
             for (int i = 0; i < 54; i++) {
                 getline(Ye_dead, line1);
                 cout << line1;
@@ -430,9 +414,6 @@ void rockPaperScissors() {
                 }
                 if (i == 2) {
                     cout << "\t \t \t Current health: " << health;
-                }
-                if (i == 3) {
-                    cout << "\t \t \t Current defense: " << defense;
                 }
                 if (i == 4) {
                     cout << "\t \t \t Current strength: " << strength;
@@ -454,7 +435,7 @@ void rockPaperScissors() {
                 }
                 cout << endl;
             }
-            
+
         }
         if (wincheck == 2) {
             std::system("cls");
@@ -495,7 +476,8 @@ void rockPaperScissors() {
         if (wincheck == 3) {
             std::system("cls");
             ifstream Ye_base2("Ye base.txt");
-            statsPLUS();
+            calcHealth();
+            calcStrenght();
             for (int i = 0; i < 54; i++) {
                 getline(Ye_base2, line1);
                 cout << line1;
@@ -539,14 +521,14 @@ void rockPaperScissors() {
             cout << kanye3[k3];
             Sleep(100);
             k3++;
-        }  
+        }
 }
 cout << endl;
     system("pause");
     system("cls");
     PlaySound(nullptr, nullptr, 0);
 
-    PlaySound(TEXT("MAIN THEME 2.wav"), NULL, SND_FILENAME | SND_SYNC | SND_ASYNC); 
+    PlaySound(TEXT("MAIN THEME 2.wav"), NULL, SND_FILENAME | SND_SYNC | SND_ASYNC);
     string wiz = "Great work on your second boss, you're half way to the top! Your next opponent shall be a fat beast and you must beat it at a game of tic tac toe. Good luck traveler!";
     int w = 0;
     while (wiz[w] != '\0')
@@ -556,12 +538,105 @@ cout << endl;
     w++;
 }
     cout << endl << " Health: " << health << endl;
-    cout << " Defense: " << defense << endl;
     cout << " Strength: " << strength << endl;
 
      system("pause");
      system("cls");
      PlaySound(nullptr, nullptr, 0);
+}
+
+int checkwin() {
+    if (square[1] == square[2] && square[2] == square[3])
+
+        return 1;
+    else if (square[4] == square[5] && square[5] == square[6])
+
+        return 1;
+    else if (square[7] == square[8] && square[8] == square[9])
+
+        return 1;
+    else if (square[1] == square[4] && square[4] == square[7])
+
+        return 1;
+    else if (square[2] == square[5] && square[5] == square[8])
+
+        return 1;
+    else if (square[3] == square[6] && square[6] == square[9])
+
+        return 1;
+    else if (square[1] == square[5] && square[5] == square[9])
+
+        return 1;
+    else if (square[3] == square[5] && square[5] == square[7])
+
+        return 1;
+    else if (square[1] != '1' && square[2] != '2' && square[3] != '3'
+        && square[4] != '4' && square[5] != '5' && square[6] != '6'
+        && square[7] != '7' && square[8] != '8' && square[9] != '9')
+
+        return 0;
+    else
+        return -1;
+    PlaySound(nullptr, nullptr, 0);
+    system("pause");
+    system("cls");
+}
+
+void board() {
+    system("cls");
+    string line;
+    ifstream gorlock_base("gorlock base.txt");
+    for (int i = 0; i < 46; i++) {
+        getline(gorlock_base, line);
+        cout << line;
+        if (i == 1) {
+            cout << "\t \t \t Player stats:";
+        }
+        if (i == 2) {
+            cout << "\t \t \t Current health: " << health;
+        }
+        if (i == 4) {
+            cout << "\t \t \t Current strength: " << strength;
+        }
+        if (i == 8) {
+            cout << "\t \t \t \t Tic Tac Toe";
+        }
+        if (i == 10) {
+            cout << "\t \t \t" << name << " (X) - Gorlock The Destroyer (O)";
+        }
+        if (i == 11) {
+            cout << "\t \t Enter a number where you wish to put X";
+        }
+        if (i == 13) {
+            cout << "\t \t \t \t     |     |     ";
+        }
+        if (i == 14) {
+            cout << "\t \t \t \t  " << square[1] << "  |  " << square[2] << "  |  " << square[3];
+        }
+        if (i == 15) {
+            cout << "\t \t \t \t_____|_____|_____";
+        }
+        if (i == 16) {
+            cout << "\t \t \t \t     |     |     ";
+        }
+        if (i == 17) {
+            cout << "\t \t \t \t  " << square[4] << "  |  " << square[5] << "  |  " << square[6];
+        }
+        if (i == 18) {
+            cout << "\t \t \t \t_____|_____|_____";
+        }
+        if (i == 19) {
+            cout << "\t \t \t \t     |     |     ";
+        }
+        if (i == 20) {
+            cout << "\t \t \t \t  " << square[7] << "  |  " << square[8] << "  |  " << square[9];
+        }
+        if (i == 21) {
+            cout << "\t \t \t \t     |     |     ";
+        }
+        cout << endl;
+    }
+
 }
 
 int TicTacToe() {
@@ -651,9 +726,6 @@ int TicTacToe() {
             if (i == 2) {
                 cout << "\t \t \t Current health: " << health;
             }
-            if (i == 3) {
-                cout << "\t \t \t Current defense: " << defense;
-            }
             if (i == 4) {
                 cout << "\t \t \t Current strength: " << strength;
             }
@@ -700,7 +772,6 @@ int TicTacToe() {
         }
         system("pause");
         cout << endl << " Health: " << health << endl;
-        cout << " Defense: " << defense << endl;
         cout << " Strength: " << strength << endl;
         system("pause");
         system("cls");
@@ -715,7 +786,6 @@ int TicTacToe() {
         calcHealth();
         calcHealth();
         calcHealth();
-        calcDefense();
         for (int i = 0; i < 46; i++) {
             getline(gorlock_dead, line);
             cout << line;
@@ -724,9 +794,6 @@ int TicTacToe() {
             }
             if (i == 2) {
                 cout << "\t \t \t Current health: " << health;
-            }
-            if (i == 3) {
-                cout << "\t \t \t Current defense: " << defense;
             }
             if (i == 4) {
                 cout << "\t \t \t Current strength: " << strength;
@@ -770,10 +837,10 @@ int TicTacToe() {
             if (i == 30) {
                 cout << "\t \t \t \t HOW DID YOU WIN?!?!?!?!??!";
             }
-            
+
             cout << endl;
         }
-        
+
     }
     else {
         system("cls");
@@ -786,9 +853,6 @@ int TicTacToe() {
         }
         if (i == 2) {
             cout << "\t \t \t Current health: " << health;
-        }
-        if (i == 3) {
-            cout << "\t \t \t Current defense: " << defense;
         }
         if (i == 4) {
             cout << "\t \t \t Current strength: " << strength;
@@ -837,102 +901,7 @@ int TicTacToe() {
     return 0;
 }
 
-int checkwin() {
-    if (square[1] == square[2] && square[2] == square[3])
 
-        return 1;
-    else if (square[4] == square[5] && square[5] == square[6])
-
-        return 1;
-    else if (square[7] == square[8] && square[8] == square[9])
-
-        return 1;
-    else if (square[1] == square[4] && square[4] == square[7])
-
-        return 1;
-    else if (square[2] == square[5] && square[5] == square[8])
-
-        return 1;
-    else if (square[3] == square[6] && square[6] == square[9])
-
-        return 1;
-    else if (square[1] == square[5] && square[5] == square[9])
-
-        return 1;
-    else if (square[3] == square[5] && square[5] == square[7])
-
-        return 1;
-    else if (square[1] != '1' && square[2] != '2' && square[3] != '3'
-        && square[4] != '4' && square[5] != '5' && square[6] != '6'
-        && square[7] != '7' && square[8] != '8' && square[9] != '9')
-
-        return 0;
-    else
-        return -1;
-    PlaySound(nullptr, nullptr, 0);
-    system("pause");
-    system("cls");
-}
-
-void board() {
-    system("cls");
-    string line;
-    ifstream gorlock_base("gorlock base.txt");
-    for (int i = 0; i < 46; i++) {
-        getline(gorlock_base, line);
-        cout << line;
-        if (i == 1) {
-            cout << "\t \t \t Player stats:";
-        }
-        if (i == 2) {
-            cout << "\t \t \t Current health: " << health;
-        }
-        if (i == 3) {
-            cout << "\t \t \t Current defense: " << defense;
-        }
-        if (i == 4) {
-            cout << "\t \t \t Current strength: " << strength;
-        }
-        if (i == 8) {
-            cout << "\t \t \t \t Tic Tac Toe";
-        }
-        if (i == 10) {
-            cout << "\t \t \t" << name << " (X) - Gorlock The Destroyer (O)";
-        }
-        if (i == 11) {
-            cout << "\t \t Enter a number where you wish to put X";
-        }
-        if (i == 13) {
-            cout << "\t \t \t \t     |     |     ";
-        }
-        if (i == 14) {
-            cout << "\t \t \t \t  " << square[1] << "  |  " << square[2] << "  |  " << square[3];
-        }
-        if (i == 15) {
-            cout << "\t \t \t \t_____|_____|_____";
-        }
-        if (i == 16) {
-            cout << "\t \t \t \t     |     |     ";
-        }
-        if (i == 17) {
-            cout << "\t \t \t \t  " << square[4] << "  |  " << square[5] << "  |  " << square[6];
-        }
-        if (i == 18) {
-            cout << "\t \t \t \t_____|_____|_____";
-        }
-        if (i == 19) {
-            cout << "\t \t \t \t     |     |     ";
-        }
-        if (i == 20) {
-            cout << "\t \t \t \t  " << square[7] << "  |  " << square[8] << "  |  " << square[9];
-        }
-        if (i == 21) {
-            cout << "\t \t \t \t     |     |     ";
-        }
-        cout << endl;
-    }
-
-}
 void Wizard() {
     system("cls");
     PlaySound(TEXT("MAIN THEME 2.wav"), NULL, SND_FILENAME | SND_SYNC | SND_ASYNC);
@@ -945,7 +914,6 @@ void Wizard() {
         w1++;
     }
     cout << endl << " Health: " << health << endl;
-    cout << " Defense: " << defense << endl;
     cout << " Strength: " << strength << endl;
 
     system("pause");
@@ -956,7 +924,7 @@ void Wizard() {
 
 void Music() {
     std::system("cls");
-    
+
     PlaySound(TEXT("LF.wav"), NULL, SND_FILENAME | SND_SYNC | SND_ASYNC);
     string les = "Sveiki sveiki! Seems you have reached the top, now you must face me, mighty Lescinskas. You cant skip me. Depending on your experience you will have an easier time against me. Lets get started >:)";
     int l = 0;
@@ -986,9 +954,6 @@ void lastBoss() {
         }
         if (i == 2) {
             cout << "\t \t \t Current health: " << health;
-        }
-        if (i == 3) {
-            cout << "\t \t \t Current defense: " << defense;
         }
         if (i == 4) {
             cout << "\t \t \t Current strength: " << strength;
@@ -1054,9 +1019,6 @@ void Lescinskas() {
             if (i == 2) {
                 cout << "\t \t \t Current health: " << health;
             }
-            if (i == 3) {
-                cout << "\t \t \t Current defense: " << defense;
-            }
             if (i == 4) {
                 cout << "\t \t \t Current strength: " << strength;
             }
@@ -1089,9 +1051,6 @@ void Lescinskas() {
             if (i == 2) {
                 cout << "\t \t \t Current health: 0";
             }
-            if (i == 3) {
-                cout << "\t \t \t Current defense: " << defense;
-            }
             if (i == 4) {
                 cout << "\t \t \t Current strength: " << strength;
             }
@@ -1109,7 +1068,7 @@ void Lescinskas() {
             }
             cout << endl;
         }
-    } 
+    }
     system("pause");
 }
 
@@ -1165,7 +1124,7 @@ void Ending1() {
         system("pause");
         PlaySound(nullptr, nullptr, 0);
     }
-    
+
 void Ending2() {
     PlaySound(TEXT("LAST SCENE.wav"), NULL, SND_FILENAME | SND_SYNC | SND_ASYNC);
     system("cls");
@@ -1220,9 +1179,7 @@ void Ending2() {
 }
 
 int main() {
-    start();
-    coinFlip();
-    rockPaperScissors();
+
     TicTacToe();
     Wizard();
     Music();
@@ -1230,7 +1187,7 @@ int main() {
     if(lesiusDead){
         Ending1();
     }
-    else{ 
+    else{
         Ending2();
     }
 }
