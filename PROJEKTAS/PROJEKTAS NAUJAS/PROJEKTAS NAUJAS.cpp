@@ -1170,6 +1170,7 @@ int main() {
 
     start();
     coinFlip();
+    rockPaperScissors();
     TicTacToe();
     Wizard();
     Music();
